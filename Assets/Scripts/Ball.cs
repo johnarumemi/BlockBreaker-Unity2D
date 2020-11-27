@@ -3,17 +3,22 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using UnityEngine;
-using Random = System.Random;
 
+/*
+ * 1. At start, locks ball to Paddle
+ * 2. On LMB click, launches ball
+ * 3. On collision with a Lose collider, plays a random audio clip
+ */
 public class Ball : MonoBehaviour
 {
-    // config params
+    // configuration params
     [SerializeField] private Paddle paddle1;
     [SerializeField] private float xPush = 2f;
     [SerializeField] private float yPush = 15f;
     [SerializeField] private AudioClip[] ballSounds;
     
     private bool launched = false;
+    
     // cached component references
     private AudioSource myAudioSource;
     
@@ -24,8 +29,8 @@ public class Ball : MonoBehaviour
     {
         if (paddle1 is null) paddle1 = FindObjectOfType<Paddle>();
         
-        myAudioSource = GetComponent<AudioSource>();
-        paddleToBallVector = transform.position - paddle1.transform.position;
+        myAudioSource = GetComponent<AudioSource>(); // Cache this for later use
+        paddleToBallVector = transform.position - paddle1.transform.position; // start datum for locking
     }
 
     // Update is called once per frame
@@ -44,7 +49,8 @@ public class Ball : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             launched = true;
-            // want to "push" the ball
+            
+            // Apply velocity to "this" Ball via its RigidBody2D component
             GetComponent<Rigidbody2D>().velocity = new Vector2(xPush, yPush);
             
         }
