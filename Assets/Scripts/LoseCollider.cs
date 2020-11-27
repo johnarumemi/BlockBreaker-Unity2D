@@ -12,7 +12,7 @@ public class LoseCollider : MonoBehaviour
     *
     * This method is called on trigger of the attached 2D Collider
     * What is passed in is a reference to the 2D object that triggered event,
-    * i.e. 
+    * 
     */
    private void OnTriggerEnter2D(Collider2D other)
    {
