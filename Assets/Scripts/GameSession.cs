@@ -5,35 +5,47 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
 
-public class GameStatus : MonoBehaviour
+public class GameSession : MonoBehaviour
 {
-    // Configuration Parameters
+    // ------ Configuration Params ------
     [Range(0.1f, 2f)][SerializeField] private float gameSpeed = 0.75f;
     [SerializeField] private int pointsPerBlockDestroyed = 83;
 
     [SerializeField] private TextMeshProUGUI scoreText;
+    
     // state variables
     [SerializeField] private int currentScore = 0;
-
+    
+    // ================================================================
+    
     private void Awake()
     { 
-        // Implements Singleton Pattern to GameStatus
+        /*
+         * Implements Singleton Pattern to GameSession
+         */
         
         // notice the plural of FindObject[s]OfType.
-        int gameStatusCount = FindObjectsOfType<GameStatus>().Length;
+        int gameSessionCount = FindObjectsOfType<GameSession>().Length;
         
-        if (gameStatusCount > 1)
-        {    // i.e if this Game Status instance is the Second One, destroy myself
-            gameObject.SetActive(false);
-            Destroy(gameObject);
+        if (gameSessionCount > 1)
+        {    // i.e if this GameSession instance is the Second One, destroy myself
+            ResetGame();
         }
         else
         {
-            // Do not destroy yourself when the next level loads in the future
+            // Do not destroy yourself when the next level/Scene loads in the future
             DontDestroyOnLoad(gameObject);
         }
     }
 
+    public void ResetGame()
+    {
+        // make this to inactive so other scripts that need it wont end up using it
+        gameObject.SetActive(false); 
+        
+        Destroy(gameObject);
+    }
+    
     // Update is called once per frame
     private void Start()
     {
@@ -48,7 +60,8 @@ public class GameStatus : MonoBehaviour
     public void AddToScore()
     {
         currentScore += pointsPerBlockDestroyed;
-
+        
+        // Update the Score Text Game Object's text field
         scoreText.text = currentScore.ToString();
     }
 }
