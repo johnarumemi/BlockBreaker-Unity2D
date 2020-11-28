@@ -1990,6 +1990,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level
       objectReference: {fileID: 0}
+    - target: {fileID: 4573244081401870970, guid: 1248b7aff377e254ea09d5a9ae0ff881,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8550251656213346516, guid: 1248b7aff377e254ea09d5a9ae0ff881,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5407,7 +5412,7 @@ PrefabInstance:
     - target: {fileID: 1153717295264434921, guid: f74b96e623e9cf5489dcde8610f30c3f,
         type: 3}
       propertyPath: m_Name
-      value: Game Status
+      value: Game Session
       objectReference: {fileID: 0}
     - target: {fileID: 1153717295264434927, guid: f74b96e623e9cf5489dcde8610f30c3f,
         type: 3}
@@ -7262,6 +7267,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block
       objectReference: {fileID: 0}
+    - target: {fileID: 1964433176657117485, guid: b6cf3c3e5dbb84f46961d06a850b97f2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1964433176657117488, guid: b6cf3c3e5dbb84f46961d06a850b97f2,
         type: 3}
       propertyPath: m_Color.g
@@ -7355,17 +7365,17 @@ PrefabInstance:
     - target: {fileID: 3196527677416927296, guid: 8ad683985bb751e4e9d21ea50bc016ae,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3196527677416927296, guid: 8ad683985bb751e4e9d21ea50bc016ae,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3196527677416927296, guid: 8ad683985bb751e4e9d21ea50bc016ae,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3196527677416927296, guid: 8ad683985bb751e4e9d21ea50bc016ae,
         type: 3}
@@ -7375,7 +7385,7 @@ PrefabInstance:
     - target: {fileID: 3196527677416927296, guid: 8ad683985bb751e4e9d21ea50bc016ae,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3196527677416927296, guid: 8ad683985bb751e4e9d21ea50bc016ae,
         type: 3}
@@ -7401,6 +7411,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Ball
+      objectReference: {fileID: 0}
+    - target: {fileID: 3196527677416927300, guid: 8ad683985bb751e4e9d21ea50bc016ae,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ad683985bb751e4e9d21ea50bc016ae, type: 3}
@@ -7470,6 +7485,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Scene Loader
+      objectReference: {fileID: 0}
+    - target: {fileID: 4104827150702553996, guid: cd45736d4f01f0949accca24cac6712d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd45736d4f01f0949accca24cac6712d, type: 3}
@@ -7563,7 +7583,7 @@ PrefabInstance:
     - target: {fileID: 4796724885930757896, guid: 8763c465a4db2d44c8d735875ace643e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 14.97
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 4796724885930757896, guid: 8763c465a4db2d44c8d735875ace643e,
         type: 3}
@@ -7598,7 +7618,7 @@ PrefabInstance:
     - target: {fileID: 4796724885930757896, guid: 8763c465a4db2d44c8d735875ace643e,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4796724885930757896, guid: 8763c465a4db2d44c8d735875ace643e,
         type: 3}
@@ -7620,6 +7640,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Paddle
       objectReference: {fileID: 0}
+    - target: {fileID: 4796724885930757898, guid: 8763c465a4db2d44c8d735875ace643e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8763c465a4db2d44c8d735875ace643e, type: 3}
 --- !u!1001 &5125232932883757008
@@ -7633,6 +7658,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: EventSystem
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125232933221523077, guid: 63146605b211eae41b960b0a1e27a771,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5125232933221523080, guid: 63146605b211eae41b960b0a1e27a771,
         type: 3}
@@ -7758,6 +7788,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Game Camera
       objectReference: {fileID: 0}
+    - target: {fileID: 6764716684321620348, guid: 061f3b20c0b29d647b0796a7ed1bd022,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 061f3b20c0b29d647b0796a7ed1bd022, type: 3}
 --- !u!1001 &8732933757708167408
@@ -7771,6 +7806,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Play Space
+      objectReference: {fileID: 0}
+    - target: {fileID: 8732933758416124227, guid: 608a78c3d6469ac409b6ccf4c3a3a32a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8732933758416124228, guid: 608a78c3d6469ac409b6ccf4c3a3a32a,
         type: 3}

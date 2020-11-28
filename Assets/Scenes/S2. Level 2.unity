@@ -246,7 +246,7 @@ PrefabInstance:
     - target: {fileID: 3196527677416927296, guid: 8ad683985bb751e4e9d21ea50bc016ae,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3196527677416927296, guid: 8ad683985bb751e4e9d21ea50bc016ae,
         type: 3}
@@ -1576,7 +1576,7 @@ PrefabInstance:
     - target: {fileID: 1964433176657117485, guid: b6cf3c3e5dbb84f46961d06a850b97f2,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1964433176657117489, guid: b6cf3c3e5dbb84f46961d06a850b97f2,
         type: 3}
@@ -2315,7 +2315,7 @@ PrefabInstance:
     - target: {fileID: 4796724885930757896, guid: 8763c465a4db2d44c8d735875ace643e,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4796724885930757896, guid: 8763c465a4db2d44c8d735875ace643e,
         type: 3}
@@ -4151,7 +4151,7 @@ PrefabInstance:
     - target: {fileID: 1153717295264434921, guid: f74b96e623e9cf5489dcde8610f30c3f,
         type: 3}
       propertyPath: m_Name
-      value: Game Status
+      value: Game Session
       objectReference: {fileID: 0}
     - target: {fileID: 1153717295264434927, guid: f74b96e623e9cf5489dcde8610f30c3f,
         type: 3}
