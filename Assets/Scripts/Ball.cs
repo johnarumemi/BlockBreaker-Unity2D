@@ -11,7 +11,7 @@ using UnityEngine;
  */
 public class Ball : MonoBehaviour
 {
-    // configuration params
+    // ------ Configuration Params ------
     [SerializeField] private Paddle paddle1;
     [SerializeField] private float xPush = 2f;
     [SerializeField] private float yPush = 15f;
@@ -19,11 +19,15 @@ public class Ball : MonoBehaviour
     
     private bool launched = false;
     
-    // cached component references
+    // ------ Cached Component References ------
+    
+    // Audio Source is what plays AudioClip
     private AudioSource myAudioSource;
     
     // state
     private Vector2 paddleToBallVector;
+    
+    // ================================================================
     
     void Start()
     {
@@ -61,22 +65,29 @@ public class Ball : MonoBehaviour
         // Current position of paddle
         if (!launched)
         {
-        Vector2 paddlePosition = new Vector2(
+            Vector2 paddlePosition = new Vector2(
             paddle1.transform.position.x,
             paddle1.transform.position.y
-        );
+            );
 
-        transform.position = paddlePosition + paddleToBallVector;
+            transform.position = paddlePosition + paddleToBallVector;
             
         }
     }
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        // Play Sound Effect
+        /*
+         * Play Sound Effect
+         * - Only play if game has started and if we have NOT collided with a gameObject
+         *   whose name contains "lose" i.e. the Lose Collider gameObject
+         */
         if (launched && !other.gameObject.name.ToLower().Contains("lose"))
         {
+            // Get Random AudioClip from the SerializedField variable
             AudioClip clip = ballSounds[UnityEngine.Random.Range(0, ballSounds.Length)];
+            
+            // Play Clip
             myAudioSource.PlayOneShot(clip);
         }
     }
